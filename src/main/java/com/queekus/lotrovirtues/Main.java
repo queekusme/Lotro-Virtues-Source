@@ -69,8 +69,8 @@ public class Main extends Application {
     }
 
     private static String getLatestFileURLs() throws IOException{
-        URL oracle = new URL("https://raw.githubusercontent.com/queekusme/Lotro-Virtues/master/updatefile");
-        BufferedReader in = new BufferedReader( new InputStreamReader(oracle.openStream()));
+        URL fileInformation = new URL("https://raw.githubusercontent.com/queekusme/Lotro-Virtues/master/updatefile");
+        BufferedReader in = new BufferedReader( new InputStreamReader(fileInformation.openStream()));
 
         String inputLine;
         StringBuilder inputBuilder = new StringBuilder();
