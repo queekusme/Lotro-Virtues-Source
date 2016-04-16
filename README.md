@@ -9,4 +9,4 @@ This program and developers are in no way employed by or connected to the Turbin
 - Java 1.8.0_74 or newer
 - (For initial setup and pulling updates) An internet Connection
 
-If you discover any bugs with the program, including any errors in the deeds themselves please open a tciket on the [Issues](https://github.com/queekusme/Lotro-Virtues-Source/issues) tab.
+If you discover any bugs with the program, including any errors in the deeds themselves please open a ticket on the [Issues](https://github.com/queekusme/Lotro-Virtues-Source/issues) tab.
