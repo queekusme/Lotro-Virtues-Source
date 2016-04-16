@@ -1,0 +1,5 @@
+The Source Code provided is made available under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Liscence.
+
+By definition, Source Code, relates to All provided files in the repository.
+
+This liscence only covers the source code in this repository. The data files held separately are not covered. They may be downloaded and modified freely and are provided as Our Interpretation of the deeds provided by LOTRO. There is No Warrenty or Guarentee the data is correct or up to date. It may or may not be updated to reflect current LOTRO releases.
