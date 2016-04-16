@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.*?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<?import javafx.scene.layout.*?>
+
+<?import java.lang.String?>
+
+<AnchorPane fx:controller="com.queekus.lotrovirtues.Controllers.MainController" xmlns:fx="http://javafx.com/fxml" styleClass="root">
+    <AnchorPane AnchorPane.topAnchor="10.0" AnchorPane.bottomAnchor="110.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+        <HBox spacing="50" alignment="center_right">
+            <VBox spacing="10" alignment="top_left">
+                <Label text="Virtue Name :"/>
+                <Label text="Region Name :"/>
+                <Label text="Include only deeds between levels :"/>
+            </VBox>
+            <VBox alignment="top_center">
+                <ComboBox fx:id="virtueCombo" layoutX="15.0" layoutY="33.0" prefWidth="180.0" promptText="All">
+                    <items> <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="All" />
+                            <String fx:value="Charity" />
+                            <String fx:value="Compassion" />
+                            <String fx:value="Confidence" />
+                            <String fx:value="Determination" />
+                            <String fx:value="Discipline" />
+                            <String fx:value="Empathy" />
+                            <String fx:value="Fidelity" />
+                            <String fx:value="Fortitude" />
+                            <String fx:value="Honesty" />
+                            <String fx:value="Honour" />
+                            <String fx:value="Idealism" />
+                            <String fx:value="Innocence" />
+                            <String fx:value="Justice" />
+                            <String fx:value="Loyalty" />
+                            <String fx:value="Mercy" />
+                            <String fx:value="Patience" />
+                            <String fx:value="Tolerance" />
+                            <String fx:value="Valour" />
+                            <String fx:value="Wisdom" />
+                            <String fx:value="Zeal" />
+                        </FXCollections> </items>
+                </ComboBox>
+                <ComboBox fx:id="regionsCombo" layoutX="15.0" layoutY="33.0" prefWidth="180.0" promptText="All" />
+                <HBox spacing="10" alignment="center">
+                    <TextField fx:id="minLevel" prefWidth="50.0" text="1" alignment="CENTER" />
+                    <Label text="to"/>
+                    <TextField fx:id="maxLevel" prefWidth="50.0" text="1" alignment="CENTER" />
+                </HBox>
+            </VBox>
+        </HBox>
+        <HBox spacing="50" alignment="center_right" AnchorPane.rightAnchor="0.0" >
+            <VBox spacing="10" alignment="top_right">
+                <Label text="Virtue Type :"/>
+                <Label text="Include Retired Deeds : "/>
+            </VBox>
+            <VBox alignment="top_center">
+                <ComboBox fx:id="typeCombo" layoutX="15.0" layoutY="33.0" prefWidth="180.0" promptText="All">
+                    <items> <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="All" />
+                        <String fx:value="Exploration" />
+                        <String fx:value="Lore" />
+                        <String fx:value="Slayer" />
+                        <String fx:value="Reputation" />
+                    </FXCollections> </items>
+                </ComboBox>
+
+                <CheckBox fx:id="chkRetired" selected="true" />
+            </VBox>
+        </HBox>
+    </AnchorPane>
+    <TableView fx:id="tblVirtues" GridPane.columnIndex="0" GridPane.rowIndex="1" AnchorPane.topAnchor="110.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" >
+        <columns>
+            <TableColumn fx:id="tcVirtueName" text="Virtue Name" prefWidth="100">
+                <cellValueFactory><PropertyValueFactory property="virtueName" /> </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tcIncrease" text="Increase" prefWidth="100">
+                <cellValueFactory><PropertyValueFactory property="increase" /> </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tcLevel" text="Level" prefWidth="100">
+                <cellValueFactory><PropertyValueFactory property="level" /> </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tcVirtueType" text="Virtue Type" prefWidth="100">
+                <cellValueFactory><PropertyValueFactory property="virtueType" /> </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tcRegion" text="Region" prefWidth="100">
+                <cellValueFactory><PropertyValueFactory property="region" /> </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tcDeedName" text="Deed Name" prefWidth="100">
+                <cellValueFactory><PropertyValueFactory property="deedName" /> </cellValueFactory>
+            </TableColumn>
+        </columns>
+        <sortOrder>
+            <fx:reference source="tcVirtueName"/>
+        </sortOrder>
+    </TableView>
+</AnchorPane>
